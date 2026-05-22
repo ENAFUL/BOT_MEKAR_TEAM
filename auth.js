@@ -1,0 +1,9 @@
+// src/utils/auth.js
+export const isAuthenticated = () => {
+  return localStorage.getItem('token') !== null;
+};
+
+export const logout = () => {
+  localStorage.removeItem('token');
+  window.location.href = '/login';
+};
